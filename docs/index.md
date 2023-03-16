@@ -1,5 +1,6 @@
-Welcome to the {{learningplan.name}} demonstration guide! The goal of this demonstration guide is to provide IBM and Business Partner technical sellers with the knowledge and tools to perform hands-on demonstrations of {{offering.name}}.
+Welcome to the {{learningplan.name}} demonstration workshop! The goal of this guide is to provide IBM and Business Partner technical sellers with the knowledge and tools to perform hands-on demonstrations of {{offering.name}}.
 
+<!-- workshop with pre-provisioned B2Bi
 !!! danger "READ THIS BEFORE PROCEEDING"
     To complete this activity, users MUST have an **entitlement key** in the IBM Entitled Registry to access IBM container software (e.g. IBM Sterling B2B Integrator). Before proceeding, verify an entitlement exists.
 
@@ -10,6 +11,8 @@ Welcome to the {{learningplan.name}} demonstration guide! The goal of this demon
     **If a valid entitlement exists, a screen similar to the one below should be displayed. The actual key will be created in a later step. lease proceed with the demonstration script.**
 
     ![](_attachments/EntitlementKey3.png)
+
+workshop -->
 
 In addition to completing all the steps in this demonstration guide, to obtain the associated {{learningplan.name}} badge:
 

@@ -1,8 +1,8 @@
 # Project info
-site_name: IBM Sterling Data Exchange Level 3 Demonstration Guide
-site_description: IBM Sterling Data Exchange Level 3 Demonstration Guide
-site_author: Andrew R. Jones (andrewj@us.ibm.com)
-copyright: Copyright &copy; 2022 IBM
+site_name: IBM Sterling Data Exchange Level 3 Workshop
+site_description: IBM Sterling Data Exchange Level 3 Workshop
+site_author: Andrew R. Jones (andrewj@us.ibm.com) & Tim Robinson (timro@us.ibm.com)
+copyright: Copyright &copy; 2023 IBM
 
 # Repository
 repo_name:  IBM/SalesEnablement-SterlingDataExchange-L3
@@ -15,7 +15,7 @@ docs_dir: docs
 nav:
   - 'Introduction': 'index.md'
   - 'Demonstration Overview': 'Overview.md'
-  - 'Environment Preparation and B2Bi Installation using IBM Cloud Shell': 'DemoPreparation-CloudShell.md'
+  - 'Accessing the Red Hat OpenShift Cluster': 'DemoPreparation-OCPlogon.md'
   - 'B2Bi Configuration Part 1': 'ConfigurationPart1.md'
   - 'B2Bi Configuration Part 2': 'ConfigurationPart2.md'
   - 'Client Demonstration': 'ClientDemonstration.md'

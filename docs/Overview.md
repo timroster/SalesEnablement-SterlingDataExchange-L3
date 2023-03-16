@@ -12,4 +12,4 @@ To create this demonstration solution, the containerized version of B2Bi will be
 
 This demonstration script consists of 3 installation and configuration chapters and a chapter describing a client demonstration scenario.
 
-It is now time to install B2Bi on Red Hat OpenShift on IBM Cloud (ROKS).
+It is now time to install B2Bi on Red Hat OpenShift.
