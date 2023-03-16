@@ -4,4 +4,4 @@ Finally, remember to complete the {{learningplan.name}} learning plan in either 
 
 **IBM Sales** and **IBM Technical** sales must complete a Stand and Deliver exercise to validate their ability to demonstrate B2Bi to potential clients. Refer to the evaluation rubric in the learning plan when preparing the Stand and Deliver.
 
-**Business Partners** (both sellers and technical sellers) must pass the {{learningplan.name}} quiz from learn.ibm.com. Remember, take the quiz while the reservation to the TechZone environment is active. The Business Partner quiz verifies use of the demonstration environment and not general knowledge of the offering.
+**Business Partners** (both sellers and technical sellers) must pass the {{learningplan.name}} quiz from learn.ibm.com. Remember, take the quiz while the you still have access to the OpenShift Cluster and B2B Integrator. The Business Partner quiz verifies use of the demonstration environment and not general knowledge of the offering.

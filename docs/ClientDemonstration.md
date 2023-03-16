@@ -121,16 +121,16 @@ To configure FileZilla for **partner2** both the File Gateway route address and 
 
 1. Verify in the **myFileGateway** application that the file transferred successfully.
 
-    ![](_attachments/MyFG_UploadFileTransferSuccess.png)
+    ![](_attachments/BB_MyFG_UploadFileTransferSuccess.png)
 
 1. Verify in **FileZilla** that **bb-partner2** received the file.
 
-    ![](_attachments/FZ_UploadFileTransferSuccess.png)
+    ![](_attachments/BB_FZ_UploadFileTransferSuccess.png)
 
     !!! note "Note"
         The file size shown in **IBM Sterling My File Gateway 2.0** is in kilobytes (KB) and in **FileZilla** the file size is displayed in bytes, but they are the same and the file transfer was successful.
 
-    It is important to realize the file has been transferred to the **B2Bi Gateway** repository. In a production environment, **partner2** would need to download the file. FileZilla is showing the contents of the data store on the gateway that **partner2** has permissions to see.
+    It is important to realize the file has been transferred to the **B2Bi Gateway** repository. In a production environment, **bb-partner2** would need to download the file. FileZilla is showing the contents of the data store on the gateway that **bb-partner2** has permissions to see.
 
 ## View the details of the file transfer in **IBM Sterling My File Gateway 2.0**
 
@@ -140,13 +140,13 @@ To configure FileZilla for **partner2** both the File Gateway route address and 
 
 1. Click the link for the recently uploaded file: **SampleInvoice1.xml**.
 
-    ![](_attachments/MyFG_FileActivity.png)
+    ![](_attachments/BB_MyFG_FileActivity.png)
 
 1. Review the events that occurred during the file transfer.
 
-    ![](_attachments/MyFG_FileActivityDetails.png)
+    ![](_attachments/BB_MyFG_FileActivityDetails.png)
 
-    Notice events **FG_0503** and **FG_0504** show the **Passthrough** channel template was used to properly route the transferred file to **bb-partner2**.
+    Notice events **FG_0503** and **FG_0504** show the **BB Passthrough** channel template was used to properly route the transferred file to **bb-partner2**.
 
 ??? question "BP quiz question"
     There is a quiz question related to the events of a successful file transfer. A screen capture of all the events and event numbers will help answer the question.
