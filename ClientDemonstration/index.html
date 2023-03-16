@@ -547,16 +547,16 @@
 </li>
 <li>
 <p>Verify in the <strong>myFileGateway</strong> application that the file transferred successfully.</p>
-<p><img alt="" src="../_attachments/MyFG_UploadFileTransferSuccess.png" /></p>
+<p><img alt="" src="../_attachments/BB_MyFG_UploadFileTransferSuccess.png" /></p>
 </li>
 <li>
 <p>Verify in <strong>FileZilla</strong> that <strong>bb-partner2</strong> received the file.</p>
-<p><img alt="" src="../_attachments/FZ_UploadFileTransferSuccess.png" /></p>
+<p><img alt="" src="../_attachments/BB_FZ_UploadFileTransferSuccess.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The file size shown in <strong>IBM Sterling My File Gateway 2.0</strong> is in kilobytes (KB) and in <strong>FileZilla</strong> the file size is displayed in bytes, but they are the same and the file transfer was successful.</p>
 </div>
-<p>It is important to realize the file has been transferred to the <strong>B2Bi Gateway</strong> repository. In a production environment, <strong>partner2</strong> would need to download the file. FileZilla is showing the contents of the data store on the gateway that <strong>partner2</strong> has permissions to see.</p>
+<p>It is important to realize the file has been transferred to the <strong>B2Bi Gateway</strong> repository. In a production environment, <strong>bb-partner2</strong> would need to download the file. FileZilla is showing the contents of the data store on the gateway that <strong>bb-partner2</strong> has permissions to see.</p>
 </li>
 </ol>
 <h2 id="view-the-details-of-the-file-transfer-in-ibm-sterling-my-file-gateway-20">View the details of the file transfer in <strong>IBM Sterling My File Gateway 2.0</strong></h2>
@@ -567,12 +567,12 @@
 </li>
 <li>
 <p>Click the link for the recently uploaded file: <strong>SampleInvoice1.xml</strong>.</p>
-<p><img alt="" src="../_attachments/MyFG_FileActivity.png" /></p>
+<p><img alt="" src="../_attachments/BB_MyFG_FileActivity.png" /></p>
 </li>
 <li>
 <p>Review the events that occurred during the file transfer.</p>
-<p><img alt="" src="../_attachments/MyFG_FileActivityDetails.png" /></p>
-<p>Notice events <strong>FG_0503</strong> and <strong>FG_0504</strong> show the <strong>Passthrough</strong> channel template was used to properly route the transferred file to <strong>bb-partner2</strong>.</p>
+<p><img alt="" src="../_attachments/BB_MyFG_FileActivityDetails.png" /></p>
+<p>Notice events <strong>FG_0503</strong> and <strong>FG_0504</strong> show the <strong>BB Passthrough</strong> channel template was used to properly route the transferred file to <strong>bb-partner2</strong>.</p>
 </li>
 </ol>
 <details class="question">
