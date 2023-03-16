@@ -26,17 +26,8 @@ The B2Bi dashboard runs as an application on Red Hat OpenShift. These steps will
 
     ![](_attachments/OSB2BiDashboardRoute.png)
 
-<!-- updated install should remove this
-5. If a security risk is received in the browser, accept it. In a production environment certificates would be configured for these web pages.
-
-![](_attachments/FFSecurityRisk1.png)
-![](_attachments/FFSecurityRisk2.png)
-
-Note: the images above are from Firefox running on MacOS. They will look different depending on browser and operating system.
--->
-
-!!! hint
-    As this is a new install, in this demonstration simple adminstrative user ids and passwords will be used. To keep things simple in this demonstration, all passwords will be set to **password#**. Not secure, but this will be a short lived demonstration environment.
+    !!! hint
+        As this is a new install, in this demonstration simple adminstrative user ids and passwords will be used. To keep things simple in this demonstration, all passwords will be set to **password#**. Not secure, but this will be a short lived demonstration environment.
 
 5. Enter **admin** in the **User ID** field and **password#** in the **Password** field, and then click **Sign In**.
 

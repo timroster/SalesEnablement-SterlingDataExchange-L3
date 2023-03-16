@@ -240,28 +240,28 @@ You will now add a group to make mapping selecting users into a routing channel 
 
 ## Create routing channels
 
-47. Click the **Channels** option under the **Routes** menu.
+1. Click the **Channels** option under the **Routes** menu.
 
-![](_attachments/FG_RoutesChannelsMenu.png)
+    ![](_attachments/FG_RoutesChannelsMenu.png)
 
-48. Click the **Create** button at bottom right to create a new **Channel**.
+1. Click the **Create** button at bottom right to create a new **Channel**.
 
-![](_attachments/FG_ChannelCreate.png)
+    ![](_attachments/FG_ChannelCreate.png)
 
-49. Select **Passthrough** for the **Routing Channel Template**, **partner1** for the **Producer**, and **partner2** for the **Consumer**, and then click **Save** to create the new channel.
+1. Select **BB Passthrough** for the **Routing Channel Template**, **bb-partner1** for the **Producer**, and **bb-partner2** for the **Consumer**, and then click **Save** to create the new channel.
 
-![](_attachments/FG-ChannelCreateP1toP2.png)
+    ![](_attachments/BB_FG_ChannelCreateP1toP2.png)
 
-50. Click **OK** on the **Success** pop-up window.
+1. Click **OK** on the **Success** pop-up window.
 
-![](_attachments/FG_ChannelCreateP1toP2Success.png)
+    ![](_attachments/BB_FG_ChannelCreateP1toP2Success.png)
 
-51. Repeat the steps 48 through 50 to create a channel from partner2 to partner1.
+1. Repeat the prior steps to create a channel from bb-partner2 to bb-partner1.
 
-![](_attachments/FG-ChannelCreateP2toP1.png)
+    ![](_attachments/BB_FG_ChannelCreateP2toP1.png)
 
-52. Click **Sign Out**.
+1. Click **Sign Out**.
 
-![](_attachments/FG-SignOut.png)
+    ![](_attachments/BB_FG_SignOut.png)
 
 In the next chapter, the fun begins as the partners start to securely exchange files.
