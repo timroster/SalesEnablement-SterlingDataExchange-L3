@@ -6,10 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="IBM Sterling Data Exchange Level 3 Demonstration Guide">
+        <meta name="description" content="IBM Sterling Data Exchange Level 3 Workshop">
       
       
-        <meta name="author" content="Andrew R. Jones (andrewj@us.ibm.com)">
+        <meta name="author" content="Andrew R. Jones (andrewj@us.ibm.com) & Tim Robinson (timro@us.ibm.com)">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>B2Bi Configuration Part 2 - IBM Sterling Data Exchange Level 3 Demonstration Guide</title>
+        <title>B2Bi Configuration Part 2 - IBM Sterling Data Exchange Level 3 Workshop</title>
       
     
     
@@ -91,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="IBM Sterling Data Exchange Level 3 Demonstration Guide" class="md-header__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Demonstration Guide" data-md-component="logo">
+    <a href=".." title="IBM Sterling Data Exchange Level 3 Workshop" class="md-header__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Workshop" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            IBM Sterling Data Exchange Level 3 Demonstration Guide
+            IBM Sterling Data Exchange Level 3 Workshop
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -197,13 +197,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="IBM Sterling Data Exchange Level 3 Demonstration Guide" class="md-nav__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Demonstration Guide" data-md-component="logo">
+    <a href=".." title="IBM Sterling Data Exchange Level 3 Workshop" class="md-nav__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Workshop" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    IBM Sterling Data Exchange Level 3 Demonstration Guide
+    IBM Sterling Data Exchange Level 3 Workshop
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -246,8 +246,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../DemoPreparation-CloudShell/" class="md-nav__link">
-        Environment Preparation and B2Bi Installation using IBM Cloud Shell
+      <a href="../DemoPreparation-OCPlogon/" class="md-nav__link">
+        Accessing the Red Hat OpenShift Cluster
       </a>
     </li>
   
@@ -315,6 +315,13 @@
         <li class="md-nav__item">
   <a href="#add-partners-to-the-partner-community" class="md-nav__link">
     Add partners to the partner community
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-group" class="md-nav__link">
+    Create a group
   </a>
   
 </li>
@@ -410,6 +417,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-a-group" class="md-nav__link">
+    Create a group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-a-routing-template" class="md-nav__link">
     Create a routing template
   </a>
@@ -440,222 +454,269 @@
 
   <h1>B2Bi Configuration Part 2</h1>
 
-<p>In this chapter, learn how to create a B2Bi partner community, add partners to the community, create a routing template, and create routing channels.</p>
+<p>In this chapter, learn how to create a B2Bi partner community, add partners to the community, create a group with these users, create a routing template for the group, and create routing channels.</p>
+<p>To make this workshop interesting, we will implement a collection of trading partner networks, with each sharing files within their network. To do this, each workshop participant will uniquely name resources by using a prefix of their initials on resources. All of the examples that follow are what Bilbo Baggins would use (bb).</p>
 <h2 id="create-a-partner-community">Create a partner community</h2>
 <ol>
-<li>Return to the OpenShift web console and click on the route link to the IBM Sterling File Gateway user interface (UI): <strong>sterling-fg-b2bi-asi-internal-route-filegateway</strong>.</li>
-</ol>
+<li>
+<p>Return to the OpenShift web console and click on the route link to the IBM Sterling File Gateway user interface (UI): <strong>sterling-fg-b2bi-asi-internal-route-filegateway</strong>.</p>
 <p><img alt="" src="../_attachments/OSRoutesFileGateway.png" /></p>
-<ol start="2">
-<li>Enter <strong>fg_sysadmin</strong> in the User ID field, <strong>password</strong> in the Password field, and then click the <strong>Sign In</strong> button.</li>
-</ol>
+</li>
+<li>
+<p>Enter <strong>fg_sysadmin</strong> in the User ID field, <strong>password#</strong> in the Password field, and then click the <strong>Sign In</strong> button.</p>
 <p><img alt="" src="../_attachments/FG_login.png" /></p>
-<ol start="3">
-<li>Click the <strong>Participants</strong> pull-down menu item on top menu bar.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>Participants</strong> pull-down menu item on top menu bar.</p>
 <p><img alt="" src="../_attachments/FG_Participants.png" /></p>
-<ol start="4">
-<li>Click <strong>Communities</strong> in the <strong>Participants</strong> menu.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Communities</strong> in the <strong>Participants</strong> menu.</p>
 <p><img alt="" src="../_attachments/FG_CommunitiesMenu.png" /></p>
-<ol start="5">
-<li>In the <strong>Communities</strong> pop-up window, click the <strong>add</strong> link.</li>
-</ol>
+</li>
+<li>
+<p>In the <strong>Communities</strong> pop-up window, click the <strong>add</strong> link.</p>
 <p><img alt="" src="../_attachments/FG_CommunitiesAddLink.png" /></p>
-<ol start="6">
-<li>Enter <strong>sftp_community</strong> in the <strong>Community Name</strong> entry field and click <strong>Next</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesName.png" /></p>
-<ol start="7">
-<li>Select both the <strong>Partner Initiates Protocol Connections to Mailbox</strong> and the <strong>Partner Listens for Protocol Connections</strong> check boxes.</li>
-</ol>
+</li>
+<li>
+<p>Append your initials to the community name followed by an underscore. For example, Bilbo Baggins would enter <strong>bb_sftp_community</strong> in the <strong>Community Name</strong> entry field and click <strong>Next</strong>.</p>
+<p><img alt="" src="../_attachments/BB_FG_CommunitiesName.png" /></p>
+</li>
+<li>
+<p>Select both the <strong>Partner Initiates Protocol Connections to Mailbox</strong> and the <strong>Partner Listens for Protocol Connections</strong> check boxes.</p>
 <p><img alt="" src="../_attachments/FG_CommunitiesProtocol-1.png" /></p>
-<ol start="8">
-<li>Select the <strong>SSH/SFTP</strong> checkbox and click <strong>Next</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>SSH/SFTP</strong> checkbox and click <strong>Next</strong>.</p>
 <p><img alt="" src="../_attachments/FG_CommunitiesProtocol-2.png" /></p>
-<ol start="9">
-<li>Click <strong>Next</strong> on the <strong>Add Community: Notifications</strong> form.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Next</strong> on the <strong>Add Community: Notifications</strong> form.</p>
 <p><img alt="" src="../_attachments/FG_CommunitiesNotifications.png" /></p>
-<ol start="10">
-<li>Click <strong>Finish</strong> to confirm the creation of the new community.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Finish</strong> to confirm the creation of the new community.</p>
 <p><img alt="" src="../_attachments/FG_CommunitiesFinish.png" /></p>
-<ol start="11">
-<li>Click <strong>Return</strong> on the community confirmation screen.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Return</strong> on the community confirmation screen.</p>
 <p><img alt="" src="../_attachments/FG_CommunitiesComplete.png" /></p>
+</li>
+</ol>
 <h2 id="add-partners-to-the-partner-community">Add partners to the partner community</h2>
-<p>Next, add 2 partners to the newly created <strong>sftp_community</strong>.</p>
-<ol start="12">
-<li>Click the <strong>edit</strong> link for the <strong>sftp_community</strong> on the <strong>Communities</strong> pop-up window.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesEdit.png" /></p>
-<ol start="13">
-<li>Under <strong>Partner</strong>, click the <strong>Add</strong> link.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesDetails.png" /></p>
-<ol start="14">
-<li>Enter <strong>partner1</strong> in the <strong>Partner Name</strong> field, 10 digits in the <strong>Phone</strong> field, <strong>partner1@localhost.com</strong> in the <strong>Email Address</strong> field, and then click <strong>Next</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1.png" /></p>
-<ol start="15">
-<li>Enter <strong>partner1</strong> in the <strong>User Name</strong> field, <strong>password</strong> in the <strong>Password</strong> field, <strong>password</strong> in the <strong>Confirm Password</strong> field, <strong>Partner</strong> in the <strong>Given Name</strong> field, <strong>One</strong> in <strong>Surname</strong> field, and then click <strong>Next</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1Password.png" /></p>
-<ol start="16">
-<li>Click <strong>partner1 is a Producer of Data</strong> and then click <strong>Next</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1Role.png" /></p>
-<ol start="17">
-<li>Review the default settings on the <strong>Initiate Connections Settings</strong> screen and then click <strong>Next</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1ICS.png" /></p>
-<ol start="18">
-<li>Review the default settings on the <strong>PGP Settings</strong> screen and then click <strong>Next</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1PGP.png" /></p>
-<ol start="19">
-<li>Review the settings for <strong>partner1</strong> and click <strong>Finish</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner1Confirm.png" /></p>
-<ol start="20">
-<li>Click <strong>Return</strong> on the <strong>Added Partner Successful</strong> screen.</li>
-</ol>
+<p>Next, add 2 partners to the newly created <strong>bb-sftp_community</strong>.</p>
+<ol>
+<li>
+<p>Click the <strong>edit</strong> link for the community that has your initials as the prefix (following the same example for Bilbo): <strong>bb_sftp_community</strong> on the <strong>Communities</strong> pop-up window.</p>
+<p><img alt="" src="../_attachments/BB_FG_CommunitiesEdit.png" /></p>
+</li>
+<li>
+<p>Under <strong>Partner</strong>, click the <strong>Add</strong> link.</p>
+<p><img alt="" src="../_attachments/BB_FG_CommunitiesDetails.png" /></p>
+</li>
+<li>
+<p>Use your initials followed by a <strong>dash</strong> as a prefix for the first partner identifier. Enter <strong>bb-partner1</strong> in the <strong>Partner Name</strong> field, 10 digits in the <strong>Phone</strong> field, <strong>bb-partner1@localhost.com</strong> in the <strong>Email Address</strong> field, and then click <strong>Next</strong>.</p>
+<p><img alt="" src="../_attachments/BB_FG_CommunitiesPartner1.png" /></p>
+</li>
+<li>
+<p>Enter <strong>bb-partner1</strong> in the <strong>User Name</strong> field, <strong>password</strong> in the <strong>Password</strong> field, <strong>password</strong> in the <strong>Confirm Password</strong> field, <strong>BB Partner</strong> in the <strong>Given Name</strong> field, <strong>One</strong> in <strong>Surname</strong> field, and then click <strong>Next</strong>. Technically, you can use any password you prefer, but it will be needed later in client demo lab.</p>
+<p><img alt="" src="../_attachments/BB_FG_CommunitiesPartner1Password.png" /></p>
+</li>
+<li>
+<p>Click <strong>bb-partner1 is a Producer of Data</strong> and then click <strong>Next</strong>.</p>
+<p><img alt="" src="../_attachments/BB_FG_CommunitiesPartner1Role.png" /></p>
+</li>
+<li>
+<p>Review the default settings on the <strong>Initiate Connections Settings</strong> screen and then click <strong>Next</strong>.</p>
+<p><img alt="" src="_attachments/BB_FG_CommunitiesPartner1ICS.png" /></p>
+</li>
+<li>
+<p>Review the default settings on the <strong>PGP Settings</strong> screen and then click <strong>Next</strong>.</p>
+<p><img alt="" src="../_attachments/BB_FG_CommunitiesPartner1PGP.png" /></p>
+</li>
+<li>
+<p>Review the settings for <strong>bb-partner1</strong> and click <strong>Finish</strong>.</p>
+<p><img alt="" src="../_attachments/BB_FG_CommunitiesPartner1Confirm.png" /></p>
+</li>
+<li>
+<p>Click <strong>Return</strong> on the <strong>Added Partner Successful</strong> screen.</p>
 <p><img alt="" src="../_attachments/FG_CommunitiesPartner1Success.png" /></p>
-<ol start="21">
-<li>Repeat the Steps 13 through 20 to create a second partner named <strong>partner2</strong> using the same settings.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesPartner2.png" /></p>
-<ol start="22">
-<li>Click <strong>Return</strong> on the <strong>Edit Community: sftp_community</strong> screen after creating both partners.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_CommunitiesReturn.png" /></p>
-<ol start="23">
-<li>Close the <strong>Communities</strong> pop-up window.</li>
-</ol>
-<p><img alt="" src="../_attachments/FS_CommunitiesClose.png" /></p>
-<ol start="24">
-<li>Click <strong>Partners</strong> under the <strong>Participants</strong> menu.</li>
-</ol>
+</li>
+<li>
+<p>Repeat the Steps 13 through 20 to create a second partner named <strong>partner2</strong> using the same settings.</p>
+<p><img alt="" src="../_attachments/BB_FG_CommunitiesPartner2.png" /></p>
+</li>
+<li>
+<p>Click <strong>Return</strong> on the <strong>Edit Community: bb_sftp_community</strong> screen after creating both partners.</p>
+<p><img alt="" src="../_attachments/BB_FG_CommunitiesReturn.png" /></p>
+</li>
+<li>
+<p>Close the <strong>Communities</strong> pop-up window.</p>
+<p><img alt="" src="../_attachments/BB_FG_CommunitiesClose.png" /></p>
+</li>
+<li>
+<p>Click <strong>Partners</strong> under the <strong>Participants</strong> menu.</p>
 <p><img alt="" src="../_attachments/FG_ParticipantsPartnersMenu.png" /></p>
-<ol start="25">
-<li>Click the <strong>Refresh</strong> button if <strong>partner1</strong> and <strong>partner2</strong> do not appear in the <strong>Partners</strong> table.</li>
+</li>
+<li>
+<p>Click the <strong>Refresh</strong> button if <strong>partner1</strong> and <strong>partner2</strong> do not appear in the <strong>Partners</strong> table.</p>
+<p><img alt="" src="../_attachments/BB_FG_PartnersTable.png" /></p>
+</li>
 </ol>
-<p><img alt="" src="../_attachments/FG_PartnersTable.png" /></p>
+<h2 id="create-a-group">Create a group</h2>
+<p>You will now add a group to make mapping selecting users into a routing channel more simple and scalable</p>
+<ol>
+<li>
+<p>Click <strong>Groups</strong> under the <strong>Participants</strong> menu.</p>
+<p><img alt="" src="../_attachments/BB_FG_Groups.png" /></p>
+</li>
+<li>
+<p>Click <strong>Create</strong> to add a new Group.</p>
+<p><img alt="" src="../_attachments/BB_FG_GroupsCreate.png" /></p>
+</li>
+<li>
+<p>Enter your capital initials followed by a space and then <strong>Partners</strong>, continuing with the example, it would be <strong>BB Partners</strong>. Then click on <strong>Save</strong>.</p>
+<p><img alt="" src="../_attachments/BB_FG_GroupsCreateName.png" /></p>
+<p>Click on <strong>Ok</strong> to clear the confirmation.</p>
+<p><img alt="" src="../_attachments/BB_FG_GroupsCreateConf.png" /></p>
+</li>
+<li>
+<p>With the Group you added selected, click on <strong>Add Partners...</strong>.</p>
+<p><img alt="" src="../_attachments/BB_FG_GroupsAddPartners.png" /></p>
+</li>
+<li>
+<p>Select the identities that you added and the group (use Ctrl-Click for multiple selections) and then Click <strong>Execute</strong></p>
+<p><img alt="" src="../_attachments/BB_FG_GroupsSelectPartners.png" /></p>
+</li>
+<li>
+<p>Review the proposed changes for moving the users to the group and Click <strong>Ok</strong></p>
+<p><img alt="" src="../_attachments/BB_FG_GroupsConfirmPartners.png" /></p>
+</li>
+<li>
+<p>Click <strong>Back</strong> to return to the previous page.</p>
+<p><img alt="" src="../_attachments/BB_FG_GroupsClosePartners.png" /></p>
+</li>
+<li>
+<p>Select the group to confirm that the partners are showing as belonging in the group.</p>
+<p><img alt="" src="../_attachments/BB_FG_GroupsVerify.png" /></p>
+</li>
+</ol>
 <h2 id="create-a-routing-template">Create a routing template</h2>
-<ol start="26">
-<li>Click <strong>Templates</strong> under the <strong>Routes</strong> menu.</li>
-</ol>
+<ol>
+<li>
+<p>Click <strong>Templates</strong> under the <strong>Routes</strong> menu.</p>
 <p><img alt="" src="../_attachments/FG_RoutesMenuTemplates.png" /></p>
-<ol start="27">
-<li>Click the <strong>Create</strong> button at the bottom of the <strong>Routing Channel Templates</strong> page.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>Create</strong> button at the bottom of the <strong>Routing Channel Templates</strong> page.</p>
 <p><img alt="" src="../_attachments/FG_Templates.png" /></p>
-<ol start="28">
-<li>Enter <strong>Passthrough</strong> in the <strong>Template Name</strong> field and then click <strong>Next&gt;&gt;</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateName.png" /></p>
-<ol start="29">
-<li>Review the <strong>Special Characters</strong> settings and then click <strong>Next&gt;&gt;</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateSpecialChars.png" /></p>
-<ol start="30">
-<li>Add <strong>All Partners</strong> to both the <strong>Producer Groups</strong> and <strong>Consumer Groups</strong> tables.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateGroups1.png" /></p>
-<ol start="31">
-<li>Click <strong>Next&gt;&gt;</strong> after adding <strong>All Partners</strong> to both groups.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_TemplateCreateGroups2.png" /></p>
-<ol start="32">
-<li>Review the <strong>Provisioning Facts</strong> page and then click <strong>Next&gt;&gt;</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Enter <strong>BB Passthrough</strong> in the <strong>Template Name</strong> field and then click <strong>Next&gt;&gt;</strong>.</p>
+<p><img alt="" src="../_attachments/BB_FG_TemplateCreateName.png" /></p>
+</li>
+<li>
+<p>Review the <strong>Special Characters</strong> settings and then click <strong>Next&gt;&gt;</strong>.</p>
+<p><img alt="" src="../_attachments/BB_FG_TemplateCreateSpecialChars.png" /></p>
+</li>
+<li>
+<p>Add only <strong>BB Partners</strong> to both the <strong>Producer Groups</strong> and <strong>Consumer Groups</strong> tables.</p>
+<p><img alt="" src="../_attachments/BB_FG_TemplateCreateGroups1.png" /></p>
+</li>
+<li>
+<p>Click <strong>Next&gt;&gt;</strong> after adding <strong>BB Partners</strong> to both groups.</p>
+<p><img alt="" src="../_attachments/BB_FG_TemplateCreateGroups2.png" /></p>
+</li>
+<li>
+<p>Review the <strong>Provisioning Facts</strong> page and then click <strong>Next&gt;&gt;</strong>.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateProvisioningFacts.png" /></p>
-<ol start="33">
-<li>Review the <strong>File Operation</strong> page and then click <strong>Next&gt;&gt;</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Review the <strong>File Operation</strong> page and then click <strong>Next&gt;&gt;</strong>.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateFileOperation.png" /></p>
-<ol start="34">
-<li>Click the <strong>Add</strong> button on the <strong>Producer</strong> page.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>Add</strong> button on the <strong>Producer</strong> page.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateProducerAdd.png" /></p>
-<ol start="35">
-<li>Click the <strong>Producer File Type</strong> pull-down menu and select <strong>Unknown</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>Producer File Type</strong> pull-down menu and select <strong>Unknown</strong>.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateProducerUnknownMenuSelect.png" /></p>
-<ol start="36">
-<li>Enter <strong>.+</strong> in the <strong>File name pattern as regular expression</strong> field and then click <strong>Save</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Enter <strong>.+</strong> in the <strong>File name pattern as regular expression</strong> field and then click <strong>Save</strong>.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateProducerUnknownPattern.png" /></p>
 <p>Setting the file pattern to the regular expression <strong>.+</strong> allows for file names of one or more characters.</p>
-<ol start="37">
-<li>Click <strong>Next&gt;&gt;</strong> on the <strong>Producer</strong> page.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Next&gt;&gt;</strong> on the <strong>Producer</strong> page.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateProducerNext.png" /></p>
-<ol start="38">
-<li>Click the <strong>Add</strong> button on the <strong>Consumer</strong> page.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>Add</strong> button on the <strong>Consumer</strong> page.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateConsumerAdd.png" /></p>
-<ol start="39">
-<li>Click the <strong>Add</strong> button on the <strong>New Delivery Channel</strong> pop-up window.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>Add</strong> button on the <strong>New Delivery Channel</strong> pop-up window.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateConsumerNewDeliveryChannel.png" /></p>
-<ol start="40">
-<li>Click <strong>Unknown</strong> in the <strong>Consumer File Type</strong> pull-down menu.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Unknown</strong> in the <strong>Consumer File Type</strong> pull-down menu.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateConsumerNewDeliveryChannelFileTypeMenu.png" /></p>
-<ol start="41">
-<li>Enter <strong>${ProducerFileName}</strong> in the <strong>File name format</strong>* field.</li>
-</ol>
+</li>
+<li>
+<p>Enter <strong>${ProducerFileName}</strong> in the <strong>File name format</strong>* field.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>${ProducerFileName}
 </code></pre></div>
-<ol start="42">
-<li>Review the help information regarding file name formats by hovering over the <strong>File name format</strong> entry field and then click <strong>Save</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Review the help information regarding file name formats by hovering over the <strong>File name format</strong> entry field and then click <strong>Save</strong>.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateConsumerNewDeliveryChannelFileTypeFormat.png" /></p>
-<ol start="43">
-<li>Click <strong>Save</strong> on the <strong>New Delivery Channel</strong> pop-up window.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Save</strong> on the <strong>New Delivery Channel</strong> pop-up window.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateConsumerNewDeliveryChannelSave.png" /></p>
-<ol start="44">
-<li>Click <strong>Save</strong> on the <strong>Consumer</strong> page.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Save</strong> on the <strong>Consumer</strong> page.</p>
 <p><img alt="" src="../_attachments/FG_TemplateCreateConsumerSave.png" /></p>
-<ol start="45">
-<li>Click <strong>OK</strong> on the <strong>Routing Channel Template successfully created.</strong> pop-up message.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>OK</strong> on the <strong>Routing Channel Template successfully created.</strong> pop-up message.</p>
 <p><img alt="" src="../_attachments/FS_TemplateCreated.png" /></p>
-<ol start="46">
-<li>Review the settings for the new <strong>Passthrough</strong> routing channel template.</li>
+</li>
+<li>
+<p>Review the settings for the new <strong>BB Passthrough</strong> routing channel template.</p>
+<p><img alt="" src="../_attachments/BB_FS_TemplateSummary.png" /></p>
+</li>
 </ol>
-<p><img alt="" src="../_attachments/FS_TemplateSummary.png" /></p>
 <h2 id="create-routing-channels">Create routing channels</h2>
-<ol start="47">
-<li>Click the <strong>Channels</strong> option under the <strong>Routes</strong> menu.</li>
-</ol>
+<ol>
+<li>
+<p>Click the <strong>Channels</strong> option under the <strong>Routes</strong> menu.</p>
 <p><img alt="" src="../_attachments/FG_RoutesChannelsMenu.png" /></p>
-<ol start="48">
-<li>Click the <strong>Create</strong> button at bottom right to create a new <strong>Channel</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>Create</strong> button at bottom right to create a new <strong>Channel</strong>.</p>
 <p><img alt="" src="../_attachments/FG_ChannelCreate.png" /></p>
-<ol start="49">
-<li>Select <strong>Passthrough</strong> for the <strong>Routing Channel Template</strong>, <strong>partner1</strong> for the <strong>Producer</strong>, and <strong>partner2</strong> for the <strong>Consumer</strong>, and then click <strong>Save</strong> to create the new channel.</li>
+</li>
+<li>
+<p>Select <strong>BB Passthrough</strong> for the <strong>Routing Channel Template</strong>, <strong>bb-partner1</strong> for the <strong>Producer</strong>, and <strong>bb-partner2</strong> for the <strong>Consumer</strong>, and then click <strong>Save</strong> to create the new channel.</p>
+<p><img alt="" src="../_attachments/BB_FG_ChannelCreateP1toP2.png" /></p>
+</li>
+<li>
+<p>Click <strong>OK</strong> on the <strong>Success</strong> pop-up window.</p>
+<p><img alt="" src="../_attachments/BB_FG_ChannelCreateP1toP2Success.png" /></p>
+</li>
+<li>
+<p>Repeat the prior steps to create a channel from bb-partner2 to bb-partner1.</p>
+<p><img alt="" src="../_attachments/BB_FG_ChannelCreateP2toP1.png" /></p>
+</li>
+<li>
+<p>Click <strong>Sign Out</strong>.</p>
+<p><img alt="" src="../_attachments/BB_FG_SignOut.png" /></p>
+</li>
 </ol>
-<p><img alt="" src="../_attachments/FG-ChannelCreateP1toP2.png" /></p>
-<ol start="50">
-<li>Click <strong>OK</strong> on the <strong>Success</strong> pop-up window.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG_ChannelCreateP1toP2Success.png" /></p>
-<ol start="51">
-<li>Repeat the steps 48 through 50 to create a channel from partner2 to partner1.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG-ChannelCreateP2toP1.png" /></p>
-<ol start="52">
-<li>Click <strong>Sign Out</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/FG-SignOut.png" /></p>
 <p>In the next chapter, the fun begins as the partners start to securely exchange files.</p>
 
 
@@ -678,7 +739,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 IBM
+      Copyright &copy; 2023 IBM
     </div>
   
   
@@ -693,7 +754,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>

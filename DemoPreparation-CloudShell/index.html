@@ -6,24 +6,20 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="IBM Sterling Data Exchange Level 3 Demonstration Guide">
+        <meta name="description" content="IBM Sterling Data Exchange Level 3 Workshop">
       
       
-        <meta name="author" content="Andrew R. Jones (andrewj@us.ibm.com)">
+        <meta name="author" content="Andrew R. Jones (andrewj@us.ibm.com) & Tim Robinson (timro@us.ibm.com)">
       
       
       
-        <link rel="prev" href="../Overview/">
-      
-      
-        <link rel="next" href="../ConfigurationPart1/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.2">
     
     
       
-        <title>Environment Preparation and B2Bi Installation using IBM Cloud Shell - IBM Sterling Data Exchange Level 3 Demonstration Guide</title>
+        <title>DemoPreparation CloudShell - IBM Sterling Data Exchange Level 3 Workshop</title>
       
     
     
@@ -91,7 +87,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="IBM Sterling Data Exchange Level 3 Demonstration Guide" class="md-header__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Demonstration Guide" data-md-component="logo">
+    <a href=".." title="IBM Sterling Data Exchange Level 3 Workshop" class="md-header__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Workshop" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -104,13 +100,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            IBM Sterling Data Exchange Level 3 Demonstration Guide
+            IBM Sterling Data Exchange Level 3 Workshop
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Environment Preparation and B2Bi Installation using IBM Cloud Shell
+              DemoPreparation CloudShell
             
           </span>
         </div>
@@ -197,13 +193,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="IBM Sterling Data Exchange Level 3 Demonstration Guide" class="md-nav__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Demonstration Guide" data-md-component="logo">
+    <a href=".." title="IBM Sterling Data Exchange Level 3 Workshop" class="md-nav__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Workshop" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    IBM Sterling Data Exchange Level 3 Demonstration Guide
+    IBM Sterling Data Exchange Level 3 Workshop
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -244,104 +240,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Environment Preparation and B2Bi Installation using IBM Cloud Shell
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Environment Preparation and B2Bi Installation using IBM Cloud Shell
+    <li class="md-nav__item">
+      <a href="../DemoPreparation-OCPlogon/" class="md-nav__link">
+        Accessing the Red Hat OpenShift Cluster
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#accept-invitation-to-join-the-itz-ibm-cloud-account-for-the-custom-roks-reservation" class="md-nav__link">
-    Accept invitation to join the ITZ IBM Cloud account for the Custom ROKS reservation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#access-the-openshift-web-console" class="md-nav__link">
-    Access the OpenShift web console
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#retrieve-the-b2bi-installation-scripts" class="md-nav__link">
-    Retrieve the B2Bi installation scripts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authenticate-to-the-openshift-cluster" class="md-nav__link">
-    Authenticate to the OpenShift cluster
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-db2-in-the-openshift-cluster" class="md-nav__link">
-    Install Db2 in the OpenShift cluster
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-db2-and-create-the-required-b2bi-tables" class="md-nav__link">
-    Configure Db2 and create the required B2Bi tables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-mq-in-the-openshift-cluster" class="md-nav__link">
-    Install MQ in the OpenShift cluster
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#update-the-environment-variables-with-ibm-container-entitlement-key-and-e-mail-address" class="md-nav__link">
-    Update the environment variables with IBM container entitlement key and e-mail address
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-b2bi-in-the-openshift-cluster" class="md-nav__link">
-    Install B2Bi in the OpenShift cluster
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -508,7 +411,7 @@
                   
 
 
-  <h1>Environment Preparation and B2Bi Installation using IBM Cloud Shell</h1>
+  <h1>DemoPreparation CloudShell</h1>
 
 <p>This demonstration guide assumes a <strong>Custom ROKS</strong> environment provisioned from IBM Technology Zone (ITZ) <a href="https://techzone.ibm.com/my/reservations/create/63c0182dec7e9b0018b4f6bf" target="_blank">here</a>.</p>
 <p>At this point, all users should have completed the steps in the IBM Sterling Data Exchange Level 3 learning plan to reserve the Red Hat OpenShift on IBM Cloud environment as described in the IBM Sterling Data Exchange Level 3 <a href="https://ibm.seismic.com/Link/Content/DC8JQcd2PWDTR8fB2FmjmV3cPC8P" target="_blank">Introduction video</a>. Before proceeding, validate that the reservation has been fully provisioned and is in the <strong>Ready</strong> state in ITZ. If not, please complete those steps before proceeding.</p>
@@ -1048,7 +951,7 @@ Defaulted container "ibm-cloud-file-nfs-storage-pod" out of: ibm-cloud-file-nfs-
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 IBM
+      Copyright &copy; 2023 IBM
     </div>
   
   
@@ -1063,7 +966,7 @@ Defaulted container "ibm-cloud-file-nfs-storage-pod" out of: ibm-cloud-file-nfs-
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>

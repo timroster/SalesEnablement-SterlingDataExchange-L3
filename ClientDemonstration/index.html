@@ -6,10 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="IBM Sterling Data Exchange Level 3 Demonstration Guide">
+        <meta name="description" content="IBM Sterling Data Exchange Level 3 Workshop">
       
       
-        <meta name="author" content="Andrew R. Jones (andrewj@us.ibm.com)">
+        <meta name="author" content="Andrew R. Jones (andrewj@us.ibm.com) & Tim Robinson (timro@us.ibm.com)">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Client Demonstration - IBM Sterling Data Exchange Level 3 Demonstration Guide</title>
+        <title>Client Demonstration - IBM Sterling Data Exchange Level 3 Workshop</title>
       
     
     
@@ -91,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="IBM Sterling Data Exchange Level 3 Demonstration Guide" class="md-header__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Demonstration Guide" data-md-component="logo">
+    <a href=".." title="IBM Sterling Data Exchange Level 3 Workshop" class="md-header__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Workshop" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -104,7 +104,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            IBM Sterling Data Exchange Level 3 Demonstration Guide
+            IBM Sterling Data Exchange Level 3 Workshop
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -197,13 +197,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="IBM Sterling Data Exchange Level 3 Demonstration Guide" class="md-nav__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Demonstration Guide" data-md-component="logo">
+    <a href=".." title="IBM Sterling Data Exchange Level 3 Workshop" class="md-nav__button md-logo" aria-label="IBM Sterling Data Exchange Level 3 Workshop" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    IBM Sterling Data Exchange Level 3 Demonstration Guide
+    IBM Sterling Data Exchange Level 3 Workshop
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -246,8 +246,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../DemoPreparation-CloudShell/" class="md-nav__link">
-        Environment Preparation and B2Bi Installation using IBM Cloud Shell
+      <a href="../DemoPreparation-OCPlogon/" class="md-nav__link">
+        Accessing the Red Hat OpenShift Cluster
       </a>
     </li>
   
@@ -433,70 +433,78 @@
 <p>When doing a client demonstration, it is recommended to split the FileZilla and browser windows on the same screen to avoid switching back and forth during the demonstration.</p>
 <p>For this scenario, <strong>partner1</strong> will use the IBM Sterling File Gateway clients, and <strong>partner2</strong> will use FileZilla.</p>
 <p>As an introduction, watch this brief video of the steps to be performed.</p>
-<p><div class="video-container"><iframe src="../_videos/SterlingDataExchange-ClientDemoWalkthrough-final.mp4" style="position: relative; width: 100%; height: 22.172vw" frameborder="0"allowfullscreen></iframe></div></p>
+<!-- 
+![type:video](_videos/SterlingDataExchange-ClientDemoWalkthrough-final.mp4)
+-->
+
 <h2 id="configure-filezilla-for-partner2">Configure FileZilla for partner2</h2>
 <p>To configure FileZilla for <strong>partner2</strong> both the File Gateway route address and port number will be needed.</p>
 <ol>
-<li>Return to the OpenShift web console and click on the <strong>sterling-fg-b2bi-asi-internal-route</strong> route on the <strong>Routes</strong> page.</li>
-</ol>
+<li>
+<p>Return to the OpenShift web console and click on the <strong>sterling-fg-b2bi-asi-internal-route</strong> route on the <strong>Routes</strong> page.</p>
 <p><img alt="" src="../_attachments/OS_InternalRoute1.png" /></p>
-<ol start="2">
-<li>Select the <strong>Host</strong> field, right click, and click <strong>Copy</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Select the <strong>Host</strong> field, right click, and click <strong>Copy</strong>.</p>
 <p>Note, the example below was captured using Firefox on MacOS. Others browser menus options may be labeled differently.</p>
 <p><img alt="" src="../_attachments/OS_InternalRoute2.png" /></p>
-<ol start="3">
-<li>Open the FileZilla application on local computer.</li>
-</ol>
+</li>
+<li>
+<p>Open the FileZilla application on local computer.</p>
 <p><img alt="" src="../_attachments/FileZilla.png" /></p>
-<ol start="4">
-<li>Click the <strong>FileZilla Site Manager</strong> <img alt="" src="../_attachments/FZSiteManagerIcon.png" /> icon.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>FileZilla Site Manager</strong> <img alt="" src="../_attachments/FZSiteManagerIcon.png" /> icon.</p>
 <p><img alt="" src="../_attachments/FileZillaSiteManager.png" /></p>
-<ol start="5">
-<li>Click the <strong>New site</strong> button.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>New site</strong> button.</p>
 <p><img alt="" src="../_attachments/FZ_NewSiteButton.png" /></p>
-<ol start="6">
-<li>Enter <strong>B2BGateway</strong> for the <strong>New Site</strong> name and press enter.</li>
-</ol>
+</li>
+<li>
+<p>Enter <strong>B2BGateway</strong> for the <strong>New Site</strong> name and press enter.</p>
 <p><img alt="" src="../_attachments/FZ_NewSiteName.png" /></p>
-<ol start="7">
-<li>Select <strong>SFTP - Secure File Transfer Protocol</strong> on the <strong>Protocol</strong> pull-down menu.</li>
-</ol>
+</li>
+<li>
+<p>Select <strong>SFTP - Secure File Transfer Protocol</strong> on the <strong>Protocol</strong> pull-down menu.</p>
 <p><img alt="" src="../_attachments/FZ_NewSiteProtocol.png" /></p>
-<ol start="8">
-<li>Paste the <strong>route</strong> copied in step 2 into the <strong>Host</strong> field.</li>
-</ol>
+</li>
+<li>
+<p>Paste the <strong>hostname</strong> copied from the OpenShift Route in step 2 into the <strong>Host</strong> field.</p>
 <p><img alt="" src="../_attachments/FZ_NewSitePasteHost.png" /></p>
-<ol start="9">
-<li>Enter the <strong>port number</strong> of the <strong>sterling-fg-b2bi-asi-backend-svc</strong> service in the <strong>Port</strong> field.</li>
-</ol>
+</li>
+<li>
+<p>Enter the <strong>port number</strong> of the <strong>sterling-fg-b2bi-asi-backend-svc</strong> service in the <strong>Port</strong> field.</p>
 <p><img alt="" src="../_attachments/FZ_NewSitePort.png" /></p>
 <details class="tip">
 <summary>Don't remember the port number?</summary>
 <p>The port number can be found in the details of the <strong>sterling-fg-b2bi-asi-backend-svc</strong> service in the OpenShift web console - use <strong>adapters-1's</strong> <strong>Node port</strong>.</p>
 <p><img alt="" src="../_attachments/OSServicesASIOverview-NodePort.png" /></p>
 </details>
-<ol start="10">
-<li>Enter <strong>partner2</strong> in the <strong>User</strong> field and <strong>password</strong> in the <strong>Password</strong> field and click the <strong>Connect</strong> button.</li>
-</ol>
-<p><img alt="" src="../_attachments/FZ_NewSiteUserPassword.png" /></p>
-<ol start="11">
-<li>Check the <strong>Always trust this host, add this key to cache</strong> checkbox and click <strong>OK</strong> on the <strong>Unknown host key</strong> pop-up window.</li>
-</ol>
+</li>
+<li>
+<p>Enter <strong>bb-partner2</strong> in the <strong>User</strong> field and <strong>password</strong> in the <strong>Password</strong> field and click the <strong>Connect</strong> button.</p>
+<p><img alt="" src="../_attachments/BB_FZ_NewSiteUserPassword.png" /></p>
+<details class="tip">
+<summary>FileZilla Warning about saving passwords</summary>
+<p>If you have told FileZilla not to save passwords, you will see a warning about the login process being changed from 'Normal' to 'Ask for password'. This is ok and you will be prompted for the password for <strong>bb-partner2</strong> when connecting to the SFTP server.</p>
+<p><img alt="" src="../_attachments/BB_FZ_PasswordWarn.png" /></p>
+</details>
+</li>
+<li>
+<p>Check the <strong>Always trust this host, add this key to cache</strong> checkbox and click <strong>OK</strong> on the <strong>Unknown host key</strong> pop-up window.</p>
 <p><img alt="" src="../_attachments/FZ_UKnknownHostKey.png" /></p>
-<ol start="12">
-<li>Notice the connection is established and the <strong>Remote site</strong> shows no files.</li>
-</ol>
+</li>
+<li>
+<p>Notice the connection is established and the <strong>Remote site</strong> shows no files.</p>
 <p><img alt="" src="../_attachments/FZ_Connected.png" /></p>
-<ol start="13">
-<li>At this time, it is recommended to have both FileZilla and the OpenShift web console both visible at the same time (either split on a single screen or using multiple monitors).</li>
-</ol>
+</li>
+<li>
+<p>At this time, it is recommended to have both FileZilla and the OpenShift web console both visible at the same time (either split on a single screen or using multiple monitors).</p>
 <p><img alt="" src="../_attachments/OS_FZ_splitScreen.png" /></p>
-<ol start="14">
-<li>Create or download the 2 sample files that will be transferred between partner1 and partner2. Since the templates created earlier allow for any file names to be transferred it does not matter what files are used.  It is suggested to use small files so the transfers happen quickly.  Feel free to download these two sample invoice files. In most browsers, select the link names below, right click on the links, and click <strong>Save link as</strong> to the local Downloads directory.</li>
-</ol>
+</li>
+<li>
+<p>Create or download the 2 sample files that will be transferred between partner1 and partner2. Since the templates created earlier allow for any file names to be transferred it does not matter what files are used.  It is suggested to use small files so the transfers happen quickly.  Feel free to download these two sample invoice files. In most browsers, select the link names below, right click on the links, and click <strong>Save link as</strong> to the local Downloads directory.</p>
 <ul>
 <li>
 <p><a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-L3/main/tools/SampleInvoice1.xml" target="_blank">SampleInvoice1.xml</a></p>
@@ -505,69 +513,75 @@
 <p><a href="https://raw.githubusercontent.com/IBM/SalesEnablement-SterlingDataExchange-L3/main/tools/SampleInvoice2.xml" target="_blank">SampleInvoice2.xml</a></p>
 </li>
 </ul>
+</li>
+</ol>
 <h2 id="transfer-a-file-from-partner1-to-partner2-using-the-ibm-sterling-my-file-gateway-20">Transfer a file from partner1 to partner2 using the IBM Sterling My File Gateway 2.0</h2>
-<ol start="15">
-<li>In the OpenShift web console click the link to open the link to the <strong>sterling-fg-b2bi-asi-internal-route-myfg</strong> route.</li>
-</ol>
+<ol>
+<li>
+<p>In the OpenShift web console click the link to open the link to the <strong>sterling-fg-b2bi-asi-internal-route-myfg</strong> route.</p>
 <p><img alt="" src="../_attachments/OS_Route-MyFG.png" /></p>
-<ol start="16">
-<li>Enter <strong>partner1</strong> in the <strong>User name</strong> field, <strong>password</strong> in the <strong>Password</strong> field, and then click <strong>Log in</strong>.</li>
-</ol>
-<p><img alt="" src="../_attachments/MyFG_login.png" /></p>
-<ol start="17">
-<li>Click the hamburger menu icon <img alt="" src="../_attachments/MyFG_HamburgerIcon.png" /> at top left and click <strong>Uploads</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Enter <strong>bb-partner1</strong> in the <strong>User name</strong> field, <strong>password</strong> in the <strong>Password</strong> field, and then click <strong>Log in</strong>.</p>
+<p><img alt="" src="../_attachments/BB_MyFG_login.png" /></p>
+</li>
+<li>
+<p>Click the hamburger menu icon <img alt="" src="../_attachments/MyFG_HamburgerIcon.png" /> at top left and click <strong>Uploads</strong>.</p>
 <p><img alt="" src="../_attachments/MyFG_UploadsMenu.png" /></p>
-<ol start="18">
-<li>Click the <strong>/</strong> directory in left-hand panel.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>/</strong> directory in left-hand panel.</p>
 <p><img alt="" src="../_attachments/MyFG_DirectorySelect.png" /></p>
-<ol start="19">
-<li>Click the <strong>select</strong> link in the <strong>Upload to /</strong> panel.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>select</strong> link in the <strong>Upload to /</strong> panel.</p>
 <p><img alt="" src="../_attachments/MyFG_UploadPanel.png" /></p>
-<ol start="20">
-<li>Click the <strong>SampleInvoice1.xml</strong> file in the <strong>Downloads</strong> directory and click <strong>Open</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click the <strong>SampleInvoice1.xml</strong> file in the <strong>Downloads</strong> directory and click <strong>Open</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Navigate to the directory where the sample invoice files were downloaded or pick another file to transfer. Do not transfer any file with confidential or personal information. The image above was captured using Firefox on MacOS, other browsers and operating system combinations may look different.</p>
 </div>
 <p><img alt="" src="../_attachments/MyFG_UploadFileDialog.png" /></p>
-<ol start="21">
-<li>Verify in the <strong>myFileGateway</strong> application that the file transferred successfully.</li>
-</ol>
+</li>
+<li>
+<p>Verify in the <strong>myFileGateway</strong> application that the file transferred successfully.</p>
 <p><img alt="" src="../_attachments/MyFG_UploadFileTransferSuccess.png" /></p>
-<ol start="22">
-<li>Verify in <strong>FileZilla</strong> that <strong>partner2</strong> received the file.</li>
-</ol>
+</li>
+<li>
+<p>Verify in <strong>FileZilla</strong> that <strong>bb-partner2</strong> received the file.</p>
 <p><img alt="" src="../_attachments/FZ_UploadFileTransferSuccess.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The file size shown in <strong>IBM Sterling My File Gateway 2.0</strong> is in kilobytes (KB) and in <strong>FileZilla</strong> the file size is displayed in bytes, but they are the same and the file transfer was successful.</p>
 </div>
 <p>It is important to realize the file has been transferred to the <strong>B2Bi Gateway</strong> repository. In a production environment, <strong>partner2</strong> would need to download the file. FileZilla is showing the contents of the data store on the gateway that <strong>partner2</strong> has permissions to see.</p>
+</li>
+</ol>
 <h2 id="view-the-details-of-the-file-transfer-in-ibm-sterling-my-file-gateway-20">View the details of the file transfer in <strong>IBM Sterling My File Gateway 2.0</strong></h2>
-<ol start="23">
-<li>Click <strong>File activity</strong> under the hamburger menu icon <img alt="" src="../_attachments/MyFG_HamburgerIcon.png" />.</li>
-</ol>
+<ol>
+<li>
+<p>Click <strong>File activity</strong> under the hamburger menu icon <img alt="" src="../_attachments/MyFG_HamburgerIcon.png" />.</p>
 <p><img alt="" src="../_attachments/MyFG_FileActivityMenu.png" /></p>
-<ol start="24">
-<li>Click the link for the recently uploaded file: <strong>SampleInvoice1.xml</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click the link for the recently uploaded file: <strong>SampleInvoice1.xml</strong>.</p>
 <p><img alt="" src="../_attachments/MyFG_FileActivity.png" /></p>
-<ol start="25">
-<li>Review the events that occurred during the file transfer.</li>
-</ol>
+</li>
+<li>
+<p>Review the events that occurred during the file transfer.</p>
 <p><img alt="" src="../_attachments/MyFG_FileActivityDetails.png" /></p>
-<p>Notice events <strong>FG_0503</strong> and <strong>FG_0504</strong> show the <strong>Passthrough</strong> channel template was used to properly route the transferred file to <strong>partner2</strong>.</p>
+<p>Notice events <strong>FG_0503</strong> and <strong>FG_0504</strong> show the <strong>Passthrough</strong> channel template was used to properly route the transferred file to <strong>bb-partner2</strong>.</p>
+</li>
+</ol>
 <details class="question">
 <summary>BP quiz question</summary>
 <p>There is a quiz question related to the events of a successful file transfer. A screen capture of all the events and event numbers will help answer the question.</p>
 </details>
 <p>For additional demonstrations, consider the following:</p>
 <ul>
-<li>Transfer a file from <strong>partner2</strong> to <strong>partner1</strong>.</li>
+<li>Transfer a file from <strong>bb-partner2</strong> to <strong>bb-partner1</strong>.</li>
 <li>Verify the file transfers using the <strong>IBM Sterling File Gateway</strong> application.</li>
 <li>Transfer a file using the older version of <strong>IBM Sterling My File Gateway</strong> using the <strong>sterling-fg-b2bi-asi-internal-route-myfilegateway</strong> route found in the OpenShift web console.</li>
 </ul>
@@ -592,7 +606,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 IBM
+      Copyright &copy; 2023 IBM
     </div>
   
   
@@ -607,7 +621,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
